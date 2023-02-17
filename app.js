@@ -21,7 +21,7 @@ require("./config")(app);
 const capitalize = require("./utils/capitalize");
 const projectName = "All About Food";
 
-//app.locals.appTitle = `${capitalize(projectName)}`;
+app.locals.appTitle = `${capitalize(projectName)}`;
 
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
