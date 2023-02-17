@@ -5,7 +5,7 @@
 ## Description
 
 Simple and easy solutions for the ingredients that you have at home.
-Mix them and make a lovely and tasty dish.
+Mix them and make a lovely and tasty dish
 
 <br>
 
