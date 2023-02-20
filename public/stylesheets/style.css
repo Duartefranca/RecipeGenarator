@@ -1,12 +1,35 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  
+  }
 
 a {
-  color: #00b7ff;
+  color: #000000;
 }
 
 h1 {
   color: 15px;
+}
+
+.card-img-top{
+  max-width: 40vw;
+}
+.random-recipe{
+  padding-top: 3vw;
+}
+
+.card {
+  border-style: hidden;
+  align-items: center;
+  
+}
+
+.btn-primary {
+  background-color: #92b92a;
+  border-style: none;
+}
+.btn-primary:hover {
+    background-color:#4e6809;
+    transition: 0.7s;
 }
