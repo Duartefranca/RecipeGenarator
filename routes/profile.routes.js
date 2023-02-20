@@ -6,10 +6,6 @@ router.get("/profile", (req, res, next) => {
     res.render("profile");
   });
   
-
-
-
-
 router.get("/genarator", (req, res, next) => {
     recipies.find()
     .then (recipiesFromDB => {
