@@ -10,3 +10,7 @@ a {
 h1 {
   color: 15px;
 }
+
+.card-img-top{
+  max-width: 50vw;
+}
