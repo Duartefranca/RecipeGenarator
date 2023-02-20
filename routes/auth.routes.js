@@ -153,9 +153,5 @@ router.post("/login", isLoggedOut, (req, res, next) => {
   });
 });
 
-router.get("bloge", (req, res, next) => {
-  res.render("/blog");
-});
-
 
 module.exports = router;
