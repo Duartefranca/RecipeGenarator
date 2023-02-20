@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const recipies = require (`../models/recipe.model`)
 
 router.get("/profile", (req, res, next) => {
     res.render("profile");
@@ -10,6 +11,7 @@ router.get("/profile", (req, res, next) => {
 
 
 router.get("/genarator", (req, res, next) => {
+    
     res.render("genarator"); // tenho ingredientes 
   });
 
