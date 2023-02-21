@@ -10,7 +10,7 @@ router.get("/profile", (req, res, next) => {
 router.get("/genarator", (req, res, next) => {
   /* const userInput = req.query.title */
   try {
-    axios.get(`https://api.spoonacular.com/recipes/random?number=10&apiKey=${process.env.APP_KEY}`)
+    axios.get(`https://api.spoonacular.com/recipes/random?number=9&apiKey=${process.env.APP_KEY}`)
       .then(responseFromApi => {
        // console.log(`olá`,responseFromApi.data)
 console.log(responseFromApi.data.recipes[0])
