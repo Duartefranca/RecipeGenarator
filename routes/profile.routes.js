@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const recipies = require (`../models/recipe.model`)
+const Recipe = require (`../models/recipe.model`)
 const axios = require("axios")
 
 router.get("/profile", (req, res, next) => {
@@ -10,40 +10,29 @@ router.get("/profile", (req, res, next) => {
 router.get("/genarator", (req, res, next) => {
   /* const userInput = req.query.title */
   try {
-    axios.get("https://api.spoonacular.com/recipes/716429/information?apiKey=48b92b3163ea49a98c858a6820b99917")
+    axios.get(`https://api.spoonacular.com/recipes/random?number=10&apiKey=${process.env.APP_KEY}`)
       .then(responseFromApi => {
-        console.log(responseFromApi)
-        res.render("genarator", {responseFromApi})})
+       // console.log(`olá`,responseFromApi.data)
+console.log(responseFromApi.data.recipes[0])
+        res.render("genarator", {recipes:responseFromApi.data.recipes})})
       
         
 
   } catch (error) {
     console.log(error)
   }
-    /* axios.get("https://api.spoonacular.com/recipes/complexSearch")
-.then(responseFromApi => res.render("genarator", {responseFromApi}))
-
-.catch(error => console.log (error)); */
 
   });
 
   router.post("/genarator", (req, res, next) => {
-    recipies.create (req.body)
+    const { title, servings, image, summary, dishTypes, cuisines} = req.body;
+    Recipe.create ({ title, servings, image, summary, dishTypes, cuisines})
     .then (newRecipie => {
         res.redirect ("genarator")
 
     })
     .catch (err => console.log ("Error while creating a recipie:", err))
-    // recebe info do user 
-    // faz chamada a api 
-    // recebe a info da api 
-    // envia para a view.
         
       });
-
-
-
-
-
 
 module.exports = router;

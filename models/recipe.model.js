@@ -3,29 +3,23 @@ const { Schema, model } = require("mongoose");
 
 const recipeSchema = new Schema(
   {
-    recipename: {
+    title: {
       type: String,      
     },
-    mainIngredient: {
+    servings: {
+      type: Number,
+    },
+    image: {
       type: String,
     },
-    ingredients: {
+    summary: {
       type: String,
     },
-    preparation: {
-      type: String,
+    dishTypes: {
+      type: [String],
     },
-    time: {
-      type: String,
-    },
-    dishType: {
-      type: String,
-    },
-    imgURL: {
-      type: String,
-    },
-    dishCountry: {
-      type: String,
+    cuisines: {
+      type: [String],
     },
   },
   {
