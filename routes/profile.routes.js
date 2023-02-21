@@ -1,17 +1,30 @@
 const express = require('express');
 const router = express.Router();
 const recipies = require (`../models/recipe.model`)
+const axios = require("axios")
 
 router.get("/profile", (req, res, next) => {
     res.render("profile");
   });
   
 router.get("/genarator", (req, res, next) => {
-    recipies.find()
-    .then (recipiesFromDB => {
-        res.render("genarator"); // tenho ingredientes
-    })
-    .catch (err => console.log ("Error while displaying a form to create a recipie: ", err))
+  /* const userInput = req.query.title */
+  try {
+    axios.get("https://api.spoonacular.com/recipes/716429/information?apiKey=48b92b3163ea49a98c858a6820b99917")
+      .then(responseFromApi => {
+        console.log(responseFromApi)
+        res.render("genarator", {responseFromApi})})
+      
+        
+
+  } catch (error) {
+    console.log(error)
+  }
+    /* axios.get("https://api.spoonacular.com/recipes/complexSearch")
+.then(responseFromApi => res.render("genarator", {responseFromApi}))
+
+.catch(error => console.log (error)); */
+
   });
 
   router.post("/genarator", (req, res, next) => {
