@@ -1,1 +1,32 @@
-<h1>genarator recipies</h1>
+<h1>Random recipies</h1>
+<p>{{recipe.title}}</p>
+
+{{#each recipes}}
+
+<div class='row'>
+  <div class='col-md-6'>
+    {{!-- Info para mostrar --}}
+      </div>
+        <h2>{{title}}</h2>
+         <p class="summary">{{summary}}</p> 
+         <img src="{{image}}" alt="{{title}}"> 
+      </div>
+    <form action='/add/{{id}}' method='post'>
+      <button type='submit' class='btn btn-primary'>Save Recipie</button>
+    </form>
+  </div>
+</div>
+{{/each}}
+
+<script>
+  //Ir buscar os summaries que existem
+  //Transforma-los num array (porque usar dom Manipulation retorna array-like objects)
+let summaries = Array.prototype.slice.call(document.getElementsByClassName('summary'))
+
+//ir buscar o texto 
+let summariesContent = summaries.map(summary => summary.innerText)
+
+//"substituir" o innerText por innerHTML
+ summaries.forEach((summary, index) => summary.innerHTML = summariesContent[index])
+
+</script>
