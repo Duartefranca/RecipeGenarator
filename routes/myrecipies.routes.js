@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Recipe = require('../models/recipe.model');
+const Recipe = require('../models/Recipe.model');
 const fileUploader = require('../config/cloudinary.config');
 const axios = require('axios')
 
@@ -28,20 +28,28 @@ router.post('/add/:api_id', async(req, res, next) => {
   }
 })
 
-router.get('/create', (req, res) => res.render('recipie/create'));
+router.get('/create', async (req, res, next) => {
+  try {
+    const allRecipes = await Recipe.find()
+    res.render('recipies/create', {allRecipes})
+  } catch (error) {
+    
+  }
+});
 
 router.post('/create', fileUploader.single('imgURL'), async (req, res, next) => {
-    let imgURL;
   try {
-    const { title, servings, image, summary, dishTypes, cuisines } = req.body;
+    let imgURL;
+
+    const { title, servings, summary, dishTypes, cuisines } = req.body;
 
     if (req.file) {
-        imgURL = req.file.path;
+      imgURL = req.file.path;
     } else {
-        imgURL = "https://img.freepik.com/fotos-premium/despertador-em-uma-placa-branca-com-uma-faca-e-um-garfo-no-fundo-azul_169016-21306.jpg?w=826";
+      imgURL = 'https://img.freepik.com/fotos-premium/despertador-em-uma-placa-branca-com-uma-faca-e-um-garfo-no-fundo-azul_169016-21306.jpg?w=826';
     }
 
-    await Recipe.create({ title, servings, image, summary, dishTypes, cuisines});
+    await Recipe.create({ title, servings, summary, dishTypes, cuisines, image: imgURL });
 
     res.redirect('/');
   } catch (error) {
@@ -50,33 +58,38 @@ router.post('/create', fileUploader.single('imgURL'), async (req, res, next) => 
   }
 });
 
-router.get('/edit/:id', async (req, res) => {
+router.get('/edit/:id', async (req, res, next) => {
   try {
     const recipe = await Recipe.findById(req.params.id);
-    res.render('recipie/edit', movie);
+    res.render('recipies/edit', recipe);
   } catch (error) {
     next(error);
   }
 });
 
-router.post('/edit/:id', fileUploader.single('poster'), async (req, res, next) => {
+router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) => {
   try {
     const { id } = req.params;
-    const { title, servings, image, summary, dishTypes, cuisines } = req.body;
+    const { title, servings, summary, dishTypes, cuisines } = req.body;
+
     let imageUrl;
 
     if (req.file) {
       imageUrl = req.file.path;
     } else {
-      imageUrl = currentImage;
+      const recipe = await Recipe.findById(id);
+      imageUrl = recipe.image;
     }
 
-    await Movie.findByIdAndUpdate(id, { title, servings, image, summary, dishTypes, cuisines });
+    await Recipe.findByIdAndUpdate(id,{ title, servings, summary, dishTypes, cuisines, image: imageUrl });
 
-    res.redirect('/recipies/list');
+    res.redirect('/recipes/myrecipes');
   } catch (error) {
     console.log(error);
     next(error);
   }
 });
+
+//delete 
+
 module.exports = router;

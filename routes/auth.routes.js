@@ -15,7 +15,7 @@ const User = require("../models/User.model");
 const axios = require("axios");
 
 // Recipies Models 
- const Recipies = require ("../models/recipe.model");
+ const Recipies = require ("../models/Recipe.model");
 
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
