@@ -1,8 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
-  }
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
 a {
   color: #000000;
@@ -12,25 +13,53 @@ h1 {
   color: 15px;
 }
 
-.card-img-top{
+.card-img-top {
   max-width: 40vw;
+  border-radius: 5%;
 }
-.random-recipe{
+.random-recipe {
   padding-top: 3vw;
 }
 
 .card {
   border-style: hidden;
+  border-radius: 5%;
   align-items: center;
-  
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.719);
+  box-sizing: border-box;
+  width: 45%;
+  padding-top: 1vw;
 }
 
 .btn-primary {
   background-color: #92b92a;
   border-style: none;
-  
 }
 .btn-primary:hover {
-    background-color:#4e6809;
-    transition: 0.7s;
+  background-color: #4e6809;
+  transition: 0.7s;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.pensil {
+  position: fixed;
+  width: 20vw;
+}
+
+.background-login {
+  width: 100vw;
+  height: 100vh;
 }
