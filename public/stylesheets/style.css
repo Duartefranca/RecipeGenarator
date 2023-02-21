@@ -3,6 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-color: black;
 }
 
 a {
@@ -46,7 +47,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  
 }
 nav {
   position: absolute;
@@ -54,12 +55,35 @@ nav {
   left: 0;
   z-index: 2;
 }
+
 .pensil {
-  position: fixed;
   width: 20vw;
 }
 
-.background-login {
+.backgound-login {  
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vh;
+}
+
+.login-form {
+  position: relative;  
+  border-style: hidden;
+  border-radius: 5%;
+  align-items: center;
+  margin-left: 70vw;
+  margin-top: 25vh;
+  background-color: rgba(255, 255, 255, 0.719);  
+  width: 200px;
+  padding: 1vw;
+}
+
+.flex-container {
+  position: relative;
+  
+}
+
+.genarator-img {
+  max-width: 20vw;
 }

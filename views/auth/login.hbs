@@ -1,33 +1,33 @@
-<img style="background-image: url('/images/background-grey.jpg');">
-<div class="backgound-login" style="background-image: url('/images/background-grey.jpg');">
+
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
       <div class="container-fluid">
         <a href="/" class="navbar-brand">All About Food</a>        
       </div>
-    </nav>
 
+</nav>
 
-<div id="login-form">
-  <h2>Log In</h2>
+<img class="backgound-login" src="/images/salmon.jpg">
 
-  <img class="pensil" src="/images/pensil.png" alt="">
+{{!-- <img class="pensil" src="/images/pensil.png" alt="">
+  <h2>Log</h2>
+  <h2>In</h2> --}}
+<div class="login-form">
+
 
   <form action="/auth/login" method="POST">
 
-    <div>
     <p>Username</p>    
-    <input type="text" name="username" placeholder="Your username" />
-    </div>
-
-    <div>
+    <p><input type="text" name="username" placeholder="Your username" /></p>
+    
     <p>Email</p>
-    <input type="email" name="email" placeholder="Your email" />
-    </div>
+    <p><input type="email" name="email" placeholder="Your email"/></p>
 
-    <div>      
     <p>Password</p>
-      <input type="password" name="password" placeholder="Your password" />
-    </div>
+    <p><input type="password" name="password" placeholder="Your password" /></p> 
+    
 
     <button type="submit">Log In</button>
 
@@ -36,5 +36,4 @@
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-</div>
 </div>
