@@ -21,7 +21,7 @@ router.post('/add/:api_id', async(req, res, next) => {
 
    await Recipe.create({title, instructions, servings, cuisines, dishTypes, image})
 
-    res.redirect('/')
+    res.redirect('/myrecipies')
   } catch (error) {
     console.log(error)
     next(error)
@@ -83,7 +83,7 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
 
     await Recipe.findByIdAndUpdate(id,{ title, servings, instructions, dishTypes, cuisines, image: imageUrl });
 
-    res.redirect('/recipies/myrecipies');
+    res.redirect('/myrecipies');
   } catch (error) {
     console.log(error);
     next(error);
@@ -93,7 +93,7 @@ router.post('/delete/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    await api.deleteCharacter(id);
+    await Recipe.findByIdAndDelete(id);
 
     res.redirect('/');
   } catch (error) {
