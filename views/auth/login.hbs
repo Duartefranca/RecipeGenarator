@@ -1,39 +1,38 @@
-
-
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  
-      <div class="container-fluid">
-        <a href="/" class="navbar-brand">All About Food</a>        
-      </div>
+
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">All About Food</a>
+  </div>
 
 </nav>
 
-<img class="backgound-login" src="/images/salmon.jpg">
+<img class="backgound-login" src="/images/salmon.jpg" />
 
-{{!-- <img class="pensil" src="/images/pensil.png" alt="">
+{{! <img class="pensil" src="/images/pensil.png" alt="">
   <h2>Log</h2>
-  <h2>In</h2> --}}
-<div class="login-form">
+  <h2>In</h2> }}
 
+<div class="login-body">
 
-  <form action="/auth/login" method="POST">
+  <div class="login-form">
 
-    <p>Username</p>    
-    <p><input type="text" name="username" placeholder="Your username" /></p>
-    
-    <p>Email</p>
-    <p><input type="email" name="email" placeholder="Your email"/></p>
+    <form action="/auth/login" method="POST">
 
-    <p>Password</p>
-    <p><input type="password" name="password" placeholder="Your password" /></p> 
-    
+      <p>Username</p>
+      <input type="text" name="username" placeholder="Your username" />
 
-    <button type="submit">Log In</button>
+      <p>Email</p>
+      <input type="email" name="email" placeholder="Your email" />
 
+      <p>Password</p>
+      <input type="password" name="password" placeholder="Your password" />
 
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
+      <button type="submit">Log In</button>
+
+      {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+      {{/if}}
+    </form>
+  </div>
+
 </div>
