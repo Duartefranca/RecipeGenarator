@@ -36,7 +36,7 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #92b92a;
+  background-color: #000000;
   border-style: none;
 }
 .btn-primary:hover {
@@ -66,7 +66,7 @@ nav {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  
 }
 
 .login-body {
@@ -108,3 +108,67 @@ nav {
 .login-input{
   margin-top: 1vw;
 }
+
+.genarator-recipies {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 100px 0px 40px 30px;
+}
+
+.favorite-recipies {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 600px 0px 40px 30px;
+}
+
+.my-recipies {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 600px 0px 0px 300px;
+}
+
+.share {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 600px 0px 0px 500px;
+}
+
+.new-recipies-1 {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin-left: 0.5vw;
+  margin-top: 5vh;
+}
+
+/* .new-recipies-2 {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 5vh 20vw 0vh 45vw;
+} */
+
+.newrecipies {
+  position: absolute;
+  align-items: center;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 10vh 20vw 10vh 45vw;
+}
+
