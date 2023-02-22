@@ -159,7 +159,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
   });
 });
 //Edit Profile
-router.get("/edit-profile", async (req, res, next) => {
+router.get("/edit-profile/:id", async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);
     res.render("auth/edit-profile", user);
@@ -169,29 +169,28 @@ router.get("/edit-profile", async (req, res, next) => {
   }
 });
 
-router.post("/edit-profile", async (req, res, next) => {
-  const { firstName, lastName, countryOfBirth, residence } =
+router.post("/edit-profile/:id", async (req, res, next) => {
+  const {id} = req.params
+  const { username, email, password } =
     req.body;
   try {
-    const userId = req.session.user._id;
-    await User.findByIdAndUpdate(userId, {
-      firstName,
-      lastName,
-      countryOfBirth,
-      residence,
+    const updatedUser = await User.findByIdAndUpdate(id, {
+      username,
+      email,
+      password,
     });
-    res.redirect("/auth/edit-profile");
+    res.redirect("/profile");
   } catch (error) {
     console.log(error);
     next(error);
   }
 });
 
-router.post("/delete", async (req, res, next) => {
+router.post("/delete/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     await User.findByIdAndRemove(id);
-    res.redirect("/");
+    res.redirect("/logout");
   } catch (error) {
     console.log(error);
     next(error);
