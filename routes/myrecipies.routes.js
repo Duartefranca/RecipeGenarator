@@ -89,7 +89,17 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
     next(error);
   }
 });
+router.post('/delete/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
 
-//delete 
+    await api.deleteCharacter(id);
+
+    res.redirect('/');
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
 
 module.exports = router;

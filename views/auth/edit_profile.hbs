@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="container">
+      <div id="card-form">
+        <h3 style="margin-bottom:1rem">EDIT PROFILE</h3>
+        <hr class="cardHr" />
+        <form action="/auth/edit-profile" method="POST">
+          <label style="margin: 1rem">FIRST NAME:
+            <input
+            type="firstName" name="firstName" placeholder="Update First name"
+            class="inputEdit"
+            />
+          </label style="margin: 1rem">
+          <hr class="cardHr" />
+          <label style="margin: 1rem">LAST NAME:
+            <input
+            type="lastName" name="lastName" placeholder="Update Last name"
+              class="inputEdit"
+            />
+          </label style="margin: 1rem">
+          <hr class="cardHr" />
+          <label style="margin: 1rem">E-MAIL:
+            <input
+            type="email" name="email" placeholder="Update email"
+              class="inputEdit"
+            />
+            </label style="margin: 1rem">
+            <hr/>
+          <hr/>
+          <br>
+          <div style="align-items: center; display: flex; justify-content: center">
+          <button class="textButtonUpdate" type="submit" action="/auth/profile">SAVE CHANGES</button>          
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="button">
+    <form class="buttonEdit" action="/auth/profile">
+      <button class="textButtonEdit" type="submit">BACK TO PROFILE</button>
+    </form>
+  </div>
+</div>
