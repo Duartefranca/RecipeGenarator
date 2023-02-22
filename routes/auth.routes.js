@@ -190,7 +190,7 @@ router.post("/delete/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     await User.findByIdAndRemove(id);
-    res.redirect("/logout");
+    res.redirect("/");
   } catch (error) {
     console.log(error);
     next(error);

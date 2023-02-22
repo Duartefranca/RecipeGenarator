@@ -3,10 +3,10 @@ const Recipe = require('../models/Recipe.model');
 const fileUploader = require('../config/cloudinary.config');
 const axios = require('axios')
 
-router.get('/myrecipies', async (req, res) => {
+router.get('/myrecipies', async (req, res, next) => {
   try {
     const recipe = await Recipe.find();
-    res.render('recipies/myrecipies', { recipies });
+    res.render('recipies/myrecipies', { recipe });
   } catch (error) {
     next(error);
   }
@@ -83,7 +83,7 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
 
     await Recipe.findByIdAndUpdate(id,{ title, servings, instructions, dishTypes, cuisines, image: imageUrl });
 
-    res.redirect('/recipes/myrecipes');
+    res.redirect('/recipies/myrecipies');
   } catch (error) {
     console.log(error);
     next(error);
