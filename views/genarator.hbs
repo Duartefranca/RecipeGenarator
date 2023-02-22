@@ -1,0 +1,68 @@
+<img class="backgound-login" src="/images/4.jpg" />
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">All About Food</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/blog">Blog</a> 
+        <a class="nav-link" href="/profile">User</a>       
+      </div>
+    </div>
+  </div>
+</nav>
+
+<a class="new-recipies-1" href="/genarator">New Recipies</a>
+
+<div class="flex-container">
+  {{! Info para mostrar }}
+  {{#each recipes}}
+
+    <div class="card genCard">
+      <img class="genarator-img" src="{{image}}" alt="{{title}}" />
+
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="ingredients">{{ingredients}}</p>
+        <p class="instructions">{{instructions}}</p>
+
+        <form action="/add/{{id}}" method="post">
+          <button type="submit" class="btn btn-primary">Save Recipe</button>
+        </form>
+      </div>
+    </div>
+
+  {{/each}}
+
+</div>
+
+<div class="newrecipies">
+<a class="new-recipies-2" href="/genarator">New Recipies</a>
+</div>
+
+<script>
+  {{!   Ir buscar os summaries que existem
+  Transforma-los num array (porque usar dom Manipulation retorna array-like objects) }}
+  let instructions =
+  Array.prototype.slice.call(document.getElementsByClassName('instructions'))
+
+  {{! ir buscar o texto  }}
+  let instructionsContent = instructions.map(instructions => instructions.innerText)
+
+  {{! "substituir" o innerText por innerHTML }}
+  instructions.forEach((instructions, index) => instructions.innerHTML =
+  instructionsContent[index])
+
+</script>

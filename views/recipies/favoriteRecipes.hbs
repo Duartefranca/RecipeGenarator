@@ -1,0 +1,21 @@
+<div class="flex-container">
+  {{! Info para mostrar }}
+  {{#each recipes}}
+
+    <div class="card genCard">
+      <img class="genarator-img" src="{{image}}" alt="{{title}}" />
+
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="ingredients">{{ingredients}}</p>
+        <p class="instructions">{{instructions}}</p>
+
+        <form action="/add/{{id}}" method="post">
+          <button type="submit" class="btn btn-primary">Save Recipe</button>
+        </form>
+      </div>
+    </div>
+
+  {{/each}}
+
+</div>

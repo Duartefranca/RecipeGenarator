@@ -1,24 +1,40 @@
-<div id="login-form">
-  <h2>Log In</h2>
-  <form action="/auth/login" method="POST">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
 
-    <label> Username
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">All About Food</a>
+  </div>
+
+</nav>
+
+<img class="backgound-login" src="/images/salmon.jpg" />
+
+{{! <img class="pensil" src="/images/pensil.png" alt="">
+  <h2>Log</h2>
+  <h2>In</h2> }}
+
+<div class="login-body">
+
+  <div class="login-form">
+
+    <form action="/auth/login" method="POST">
+
+      <p class="login-input">Username</p>
       <input type="text" name="username" placeholder="Your username" />
-    </label>
 
-    <label> Email
+      <p class="login-input">Email</p>
       <input type="email" name="email" placeholder="Your email" />
-    </label>
 
-    <label> Password
+      <p class="login-input">Password</p>
       <input type="password" name="password" placeholder="Your password" />
-    </label>
 
-    <button type="submit">Log In</button>
+      <button class="login-input" type="submit">Login</button>
 
+      <a class="nav-link" href="/auth/signup">Signup</a>
 
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
+      {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+      {{/if}}
+    </form>
+  </div>
+
 </div>
