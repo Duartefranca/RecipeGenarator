@@ -79,7 +79,7 @@ nav {
 .login-form {
   position: relative;
   border-style: hidden;
-  border-radius: 5%;
+  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.836);
   width: 200px;
   padding: 1vw;
@@ -91,12 +91,12 @@ nav {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border-radius: 15%;
+  border-radius: 30px;
 }
 
 .genarator-img {
   max-width: 20vw;
-  border-radius: 5%;
+  border-radius: 30px;
 }
 
 .genCard {
@@ -109,40 +109,58 @@ nav {
   margin-top: 1vw;
 }
 
-.genarator-recipies {
+.recipies {
   position: absolute;
   text-decoration: none;
   border-style: hidden;
-  border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin: 100px 0px 40px 30px;
+  border-radius: 40px;
+  background-color: rgba(99, 98, 98, 0.733);
+  padding: 2vh 2vw 2vh 2vw;
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+  }
+  
+#genarator {
+  margin: 23vh 0vw 0vh 33vw;
+  font-size: 6em;
+  border-radius: 50px;  
+  font-weight: bold;
 }
 
-.favorite-recipies {
-  position: absolute;
-  text-decoration: none;
-  border-style: hidden;
-  border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin: 600px 0px 40px 30px;
+#genarator:hover {  
+  background-color: #678aa8;
+  color: black;
+  transition: 0.7s;
 }
 
-.my-recipies {
-  position: absolute;
-  text-decoration: none;
-  border-style: hidden;
-  border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin: 600px 0px 0px 300px;
+#favorites {
+  margin: 60vh 0vw 0vh 7vw;
 }
 
-.share {
-  position: absolute;
-  text-decoration: none;
-  border-style: hidden;
-  border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin: 600px 0px 0px 500px;
+#favorites:hover {
+  background-color: #74cca2;
+  color: black;
+  transition: 0.7s;
+}
+
+#myrecipies{
+  margin: 60vh 0vw 0vh 41vw;
+}
+
+#myrecipies:hover{
+  background-color: #fe510d;
+  color: black;
+  transition: 0.7s;
+}
+
+#share{
+  margin: 60vh 0vw 0vh 75vw;
+}
+#share:hover{
+  background-color: #fbd100;
+  color: black;
+  transition: 0.7s;
 }
 
 .new-recipies-1 {
@@ -155,14 +173,14 @@ nav {
   margin-top: 5vh;
 }
 
-/* .new-recipies-2 {
+.new-recipies-2 {
   position: absolute;
   text-decoration: none;
   border-style: hidden;
   border-radius: 5%;
   background-color: rgba(255, 255, 255, 0.836);
   margin: 5vh 20vw 0vh 45vw;
-} */
+}
 
 .newrecipies {
   position: absolute;
