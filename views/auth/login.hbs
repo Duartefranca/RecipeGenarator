@@ -18,16 +18,18 @@
 
     <form action="/auth/login" method="POST">
 
-      <p>Username</p>
+      <p class="login-input">Username</p>
       <input type="text" name="username" placeholder="Your username" />
 
-      <p>Email</p>
+      <p class="login-input">Email</p>
       <input type="email" name="email" placeholder="Your email" />
 
-      <p>Password</p>
+      <p class="login-input">Password</p>
       <input type="password" name="password" placeholder="Your password" />
 
-      <button type="submit">Log In</button>
+      <button class="login-input" type="submit">Log In</button>
+
+      <a class="nav-link" href="/auth/signup">Sign Up</a>
 
       {{#if errorMessage}}
         <p class="error">{{errorMessage}}</p>
