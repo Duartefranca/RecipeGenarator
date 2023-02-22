@@ -3,10 +3,10 @@ const Recipe = require('../models/Recipe.model');
 const fileUploader = require('../config/cloudinary.config');
 const axios = require('axios')
 
-router.get('/myrecipies', async (req, res) => {
+router.get('/myrecipies', async (req, res, next) => {
   try {
     const recipe = await Recipe.find();
-    res.render('recipies/myrecipies', { recipies });
+    res.render('recipies/myrecipies', { recipe });
   } catch (error) {
     next(error);
   }
@@ -21,7 +21,7 @@ router.post('/add/:api_id', async(req, res, next) => {
 
    await Recipe.create({title, instructions, servings, cuisines, dishTypes, image})
 
-    res.redirect('/')
+    res.redirect('/myrecipies')
   } catch (error) {
     console.log(error)
     next(error)
@@ -83,7 +83,7 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
 
     await Recipe.findByIdAndUpdate(id,{ title, servings, instructions, dishTypes, cuisines, image: imageUrl });
 
-    res.redirect('/recipes/myrecipes');
+    res.redirect('/myrecipies');
   } catch (error) {
     console.log(error);
     next(error);
@@ -93,7 +93,7 @@ router.post('/delete/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    await api.deleteCharacter(id);
+    await Recipe.findByIdAndDelete(id);
 
     res.redirect('/');
   } catch (error) {
