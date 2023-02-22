@@ -158,6 +158,45 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     res.redirect("/");
   });
 });
+//Edit Profile
+router.get("/edit-profile", async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    res.render("auth/edit-profile", user);
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
+
+router.post("/edit-profile", async (req, res, next) => {
+  const { firstName, lastName, countryOfBirth, residence } =
+    req.body;
+  try {
+    const userId = req.session.user._id;
+    await User.findByIdAndUpdate(userId, {
+      firstName,
+      lastName,
+      countryOfBirth,
+      residence,
+    });
+    res.redirect("/auth/edit-profile");
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
+
+router.post("/delete", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    await User.findByIdAndRemove(id);
+    res.redirect("/");
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
 
 
 module.exports = router;
