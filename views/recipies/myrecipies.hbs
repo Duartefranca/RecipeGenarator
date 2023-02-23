@@ -1,4 +1,4 @@
-<img class="backgound-login" src="/images/sardine.jpg" />
+<img class="backgound-login" src="/images/4.jpg" />
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -24,20 +24,36 @@
   </div>
 </nav>
 
-<h2>My Recipies </h2>
 
-<div class="myRecipes">
+<div class="flex-container">
+{{!-- <h2>My Recipies </h2> --}}
 
 {{#each recipe}}
-<div>
 
-{{title}}
-{{image}}
-{{ingredients}}
-{{instructions}}
+<div class="card genCard">
+<img class="genarator-img" src="{{image}}" alt="{{title}}" />
+<h5 class="card-title">{{title}}</h5>
+<p class="ingredients">{{ingredients}}</p>
+<p class="instructions">{{instructions}}</p>
 <a href="/edit/{{_id}}"> EDIT </a>
 <form action='/delete/{{_id}}' method='post'><button type="submit">Delete Recipies</button></form>
 </div>
+
 {{/each}}
 
 </div>
+
+<script>
+  {{!   Ir buscar os summaries que existem
+  Transforma-los num array (porque usar dom Manipulation retorna array-like objects) }}
+  let instructions =
+  Array.prototype.slice.call(document.getElementsByClassName('instructions'))
+
+  {{! ir buscar o texto  }}
+  let instructionsContent = instructions.map(instructions => instructions.innerText)
+
+  {{! "substituir" o innerText por innerHTML }}
+  instructions.forEach((instructions, index) => instructions.innerHTML =
+  instructionsContent[index])
+
+</script>
