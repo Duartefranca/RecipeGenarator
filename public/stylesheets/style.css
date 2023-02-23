@@ -121,8 +121,8 @@ nav {
   color: white;
   }
   
-#genarator {
-  margin: 23vh 0vw 0vh 33vw;
+ #genarator {
+  margin: 17vh 0vw 0vh 31vw;
   font-size: 6em;
   border-radius: 50px;  
   font-weight: bold;
@@ -134,28 +134,29 @@ nav {
   transition: 0.7s;
 }
 
-#favorites {
-  margin: 60vh 0vw 0vh 7vw;
+#ingredient {
+  font-size: 4em;
+  margin: 37vh 0vw 0vh 28.5vw;
 }
 
-#favorites:hover {
+#ingredient:hover {
   background-color: #74cca2;
   color: black;
   transition: 0.7s;
 }
 
 #myrecipies{
-  margin: 60vh 0vw 0vh 41vw;
+  margin: 60vh 0vw 0vh 21vw;
 }
 
 #myrecipies:hover{
   background-color: #fe510d;
   color: black;
   transition: 0.7s;
-}
+} 
 
 #share{
-  margin: 60vh 0vw 0vh 75vw;
+  margin: 60vh 0vw 0vh 65vw;
 }
 #share:hover{
   background-color: #fbd100;
