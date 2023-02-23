@@ -5,15 +5,23 @@ body {
   background-size: 100%;
   background-color: black;
   height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
   color: #000000;
+  text-size-adjust: bold;
 }
 
 h1 {
   color: 15px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .card-img-top {
@@ -32,7 +40,6 @@ h1 {
   background-color: rgba(255, 255, 255, 0.836);
   box-sizing: border-box;
   width: 40%;
-  
 }
 
 .btn-primary {
@@ -50,23 +57,20 @@ h1 {
   left: 0;
   width: 100vw;
 }
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
 
-.pensil {
-  width: 20vw;
-}
-
-.backgound-login {
+.long-backgound {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  
+}
+
+.backgound-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .login-body {
@@ -76,6 +80,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
 }
+
 .login-form {
   position: relative;
   border-style: hidden;
@@ -87,25 +92,28 @@ nav {
 }
 
 .flex-container {
+  position: absolute;
   display: flex;
-  width: 100%;
+  width: 90%;
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-radius: 30px;
+  text-align: center;
+  padding: auto;
 }
 
 .genarator-img {
-  max-width: 20vw;
+  width: 25vw;
   border-radius: 30px;
 }
 
 .genCard {
   margin: 10px;
   margin-top: 80px;
-  width: 400px;
+  width: 25vw;
 }
 
-.login-input{
+.login-input {
   margin-top: 1vw;
 }
 
@@ -119,16 +127,16 @@ nav {
   font-weight: bold;
   font-size: 2em;
   color: white;
-  }
-  
- #genarator {
-  margin: 17vh 0vw 0vh 31vw;
-  font-size: 6em;
-  border-radius: 50px;  
+}
+
+#genarator {
+  margin: 17vh 0vw 0vh 33.5vw;
+  font-size: 5em;
+  border-radius: 50px;
   font-weight: bold;
 }
 
-#genarator:hover {  
+#genarator:hover {
   background-color: #678aa8;
   color: black;
   transition: 0.7s;
@@ -145,52 +153,35 @@ nav {
   transition: 0.7s;
 }
 
-#myrecipies{
-  margin: 60vh 0vw 0vh 21vw;
+#myrecipies {
+  margin: 55vh 0vw 0vh 36vw;
+  font-size: 4em;
 }
 
-#myrecipies:hover{
+#myrecipies:hover {
   background-color: #fe510d;
   color: black;
   transition: 0.7s;
-} 
+}
 
-#share{
+#share {
   margin: 60vh 0vw 0vh 65vw;
 }
-#share:hover{
+#share:hover {
   background-color: #fbd100;
   color: black;
   transition: 0.7s;
 }
 
-.new-recipies-1 {
+.new-recipies {
   position: absolute;
   text-decoration: none;
   border-style: hidden;
-  border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin-left: 0.5vw;
-  margin-top: 5vh;
-}
-
-.new-recipies-2 {
-  position: absolute;
-  text-decoration: none;
-  border-style: hidden;
-  border-radius: 5%;
+  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.836);
   margin: 5vh 20vw 0vh 45vw;
 }
 
-.newrecipies {
-  position: absolute;
-  align-items: center;
-  border-radius: 5%;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin: 10vh 20vw 10vh 45vw;
-}
-
 .logoImg {
   width: 30px;
 }
@@ -199,12 +190,86 @@ nav {
   width: 30px;
 }
 
-.erro404{
+.erro404 {
   position: absolute;
   color: aliceblue;
   padding: 0vh 50vw 0vh 0vw;
 }
 
-.img404{
+.search {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+  width: 45%;
+  height: 40%;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.836);
+}
+
+.savedRecipes {
+  position: absolute;
+}
+
+.blog {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+  width: 85%;
+  height: 80%;
+  border-radius: 30px;
+  background-color: white;  
+  margin-top: 7vh;
+}
+
+.blogImg {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+  width: 75vw;
+  height: 90%;
+
   
+}
+
+.recipePage {
+  position: absolute;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.ingInstr {
+  margin-right: 1vw;
+  text-align: start;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  text-align: center;
+  padding: auto;
+}
+
+.my-recipies-text {
+  color: white;
+}
+
+#search{
+  margin-bottom: 60px;
+}
+
+#edit-user {
+  position: absolute;
+  left: 50%;
+  top: 57%; 
+  transform: translate(-50%, -50%);  
+  width: 35vw;
+  height: 80%;
 }

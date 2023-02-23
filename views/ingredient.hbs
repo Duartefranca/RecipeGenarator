@@ -1,4 +1,4 @@
-{{!-- <img class="backgound-login" src="/images/4.jpg" /> --}}
+<img class="long-backgound" src="/images/bread.png" />
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -24,24 +24,34 @@
   </div>
 </nav>
 
+<br>
+<div class="recipies" id="search">
 
-<h1>search by ingredient</h1>
+<h2>Search by Ingredient</h2>
 <form action="/ingredient" method="post">
 <input type="text" name="userInput">
 <button type="submit">search</button>
 </form>
-
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 {{#if recipes}}
+<div class="container">
+
 {{#each recipes}}
 
- <div class="card">
+ <div class="card genCard">
     <img class="genarator-img" src="{{image}}" alt="{{title}}"> 
 
     <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <p class="summary">{{summary}}</p> 
+        <h5 class="card-title">{{title}}</h5>
+        <p class="ingredients">{{ingredients}}</p>
+        <p class="instructions">{{instructions}}</p>
 
       <form action='/add/{{id}}' method='post'>
       <button type='submit' class='btn btn-primary'>Save Recipe</button>
@@ -51,4 +61,7 @@
   </div>
 
 {{/each}}
+</div>
 {{/if}}
+
+

@@ -1,4 +1,33 @@
-<img src="" alt="">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active" data-bs-interval="500">
+      <img src="/images/salmon.jpg" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="500">
+      <img src="/images/avocato.jpg" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="500">
+      <img src="/images/vegetables.jpg" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="500">
+      <img src="/images/seeds.jpg" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="500">
+      <img src="/images/soup.jpg" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="500">
+      <img src="/images/sardine.jpg" class="d-block w-100"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="500">
+      <img src="/images/nuts.jpg" class="d-block w-100"/>
+    </div>
+
+  </div>
+
+</div>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     
@@ -34,37 +63,6 @@
   </div>
 </nav>
 
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-
-  <div class="carousel-inner">
-
-    <div class="carousel-item active" data-bs-interval="500">
-      <img src="/images/salmon.jpg" class="d-block w-100"/>
-    </div>
-    <div class="carousel-item" data-bs-interval="500">
-      <img src="/images/avocato.jpg" class="d-block w-100"/>
-    </div>
-    <div class="carousel-item" data-bs-interval="500">
-      <img src="/images/vegetables.jpg" class="d-block w-100"/>
-    </div>
-    <div class="carousel-item" data-bs-interval="500">
-      <img src="/images/seeds.jpg" class="d-block w-100"/>
-    </div>
-    <div class="carousel-item" data-bs-interval="500">
-      <img src="/images/soup.jpg" class="d-block w-100"/>
-    </div>
-    <div class="carousel-item" data-bs-interval="500">
-      <img src="/images/sardine.jpg" class="d-block w-100"/>
-    </div>
-    <div class="carousel-item" data-bs-interval="500">
-      <img src="/images/nuts.jpg" class="d-block w-100"/>
-    </div>
-
-  </div>
-
-</div>
-
 <div class="greeting">
 
   <div class="card">
@@ -76,14 +74,14 @@
     
         <a class="nav-link" href="/auth/login">Login</a>      
     
-          {{/unless}}
+      {{/unless}}
 
-          {{#if currentUser}}
+      {{#if currentUser}}
     
         <a class="nav-link" href="/profile">User{{user}}</a>      
     
-          {{/if}}
-      {{!-- <a href="/auth/signup" class="btn btn-primary">Sign Up</a> --}}
+      {{/if}}
+
     </div>
   </div>
 
