@@ -95,7 +95,7 @@ router.post('/delete/:id', async (req, res, next) => {
 
     await Recipe.findByIdAndDelete(id);
 
-    res.redirect('/');
+    res.redirect('/myrecipies');
   } catch (error) {
     console.log(error);
     next(error);
