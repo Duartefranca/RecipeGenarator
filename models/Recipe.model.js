@@ -9,6 +9,10 @@ const recipeSchema = new Schema(
     servings: {
       type: Number,
     },
+    instructions:{
+      type: String,
+
+    },
     image: {
       type: String,
     },
