@@ -195,3 +195,16 @@ nav {
   width: 30px;
 }
 
+.logoImg {
+  width: 30px;
+}
+
+.erro404{
+  position: absolute;
+  color: aliceblue;
+  padding: 0vh 50vw 0vh 0vw;
+}
+
+.img404{
+  
+}
