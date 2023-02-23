@@ -176,7 +176,7 @@ router.post("/edit-profile/:id", async (req, res, next) => {
       email,
       password,
     });
-    res.redirect("/profile");
+    res.redirect("/profile/:id");
   } catch (error) {
     console.log(error);
     next(error);
