@@ -1,4 +1,4 @@
-{{!-- <img class="backgound-login" src="/images/4.jpg" /> --}}
+<img class="backgound-login" src="/images/sardine.jpg" />
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -25,8 +25,13 @@
 </nav>
 
 <h2>My Recipies </h2>
+
+<div class="myRecipes">
+
 {{#each recipe}}
 {{title}}
 <a href="/edit/{{_id}}"> EDIT </a>
 <form action='/delete/{{_id}}' method='post'><button type="submit">Delete Recipies</button></form>
 {{/each}}
+
+</div>
