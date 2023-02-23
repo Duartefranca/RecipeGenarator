@@ -198,10 +198,27 @@ nav {
   position: absolute;
 }
 
+.blog {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+  width: 85%;
+  height: 80%;
+  border-radius: 30px;
+  background-color: white;  
+  margin-top: 7vh;
+}
+
 .blogImg {
   position: absolute;
-  padding-inline-start: 5%;
-  border-radius: 5%;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+  width: 75vw;
+  height: 90%;
+
+  
 }
 
 .recipePage {
