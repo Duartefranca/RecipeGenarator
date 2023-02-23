@@ -1,4 +1,4 @@
-<img class="backgound-login" src="/images/4.jpg" />
+<img class="backgound-login" src="/images/bread.png" />
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -25,16 +25,23 @@
 </nav>
 
 
+<div class="recipePage">
+<h2>My Recipies</h2>
+</div>
+
 <div class="flex-container">
-{{!-- <h2>My Recipies </h2> --}}
 
 {{#each recipe}}
 
 <div class="card genCard">
 <img class="genarator-img" src="{{image}}" alt="{{title}}" />
 <h5 class="card-title">{{title}}</h5>
+
+<div class="ingInstr">
 <p class="ingredients">{{ingredients}}</p>
 <p class="instructions">{{instructions}}</p>
+</div>
+
 <a href="/edit/{{_id}}"> EDIT </a>
 <form action='/delete/{{_id}}' method='post'><button type="submit">Delete Recipies</button></form>
 </div>

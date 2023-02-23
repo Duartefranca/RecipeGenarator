@@ -1,4 +1,4 @@
-<img class="backgound-login" src="/images/soup.jpg" />
+<img class="backgound-login" src="/images/bread.png" />
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -39,14 +39,13 @@
 {{#if recipes}}
 {{#each recipes}}
 
- <div class="card">
+ <div class="card genCard">
     <img class="genarator-img" src="{{image}}" alt="{{title}}"> 
 
     <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <P class="image">{{image}}</P>
-      <p class="summary">{{summary}}</p> 
-      <p class ="instructions">{{instructions}}</p> </p>
+        <h5 class="card-title">{{title}}</h5>
+        <p class="ingredients">{{ingredients}}</p>
+        <p class="instructions">{{instructions}}</p>
 
       <form action='/add/{{id}}' method='post'>
       <button type='submit' class='btn btn-primary'>Save Recipe</button>
@@ -59,3 +58,4 @@
 {{/if}}
 
 </div>
+

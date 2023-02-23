@@ -5,7 +5,6 @@ body {
   background-size: 100%;
   background-color: black;
   height: 100vh;
-  width: 100vw;
 }
 
 a {
@@ -38,7 +37,7 @@ nav {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.836);
   box-sizing: border-box;
-  width: 40%;  
+  width: 40%;
 }
 
 .btn-primary {
@@ -61,7 +60,9 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;  
+  max-width: 100%;
+  width: 100%;
+  
 }
 
 .login-body {
@@ -85,10 +86,12 @@ nav {
 .flex-container {
   position: absolute;
   display: flex;
-  width: 100%;
+  width: 90%;
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-radius: 30px;
+  text-align: center;
+  padding: auto;
 }
 
 .genarator-img {
@@ -99,10 +102,10 @@ nav {
 .genCard {
   margin: 10px;
   margin-top: 80px;
-  width: 25vw;  
+  width: 25vw;
 }
 
-.login-input{
+.login-input {
   margin-top: 1vw;
 }
 
@@ -116,16 +119,16 @@ nav {
   font-weight: bold;
   font-size: 2em;
   color: white;
-  }
-  
- #genarator {
-  margin: 17vh 0vw 0vh 31vw;
-  font-size: 6em;
-  border-radius: 50px;  
+}
+
+#genarator {
+  margin: 17vh 0vw 0vh 33.5vw;
+  font-size: 5em;
+  border-radius: 50px;
   font-weight: bold;
 }
 
-#genarator:hover {  
+#genarator:hover {
   background-color: #678aa8;
   color: black;
   transition: 0.7s;
@@ -142,20 +145,21 @@ nav {
   transition: 0.7s;
 }
 
-#myrecipies{
-  margin: 60vh 0vw 0vh 21vw;
+#myrecipies {
+  margin: 55vh 0vw 0vh 36vw;
+  font-size: 4em;
 }
 
-#myrecipies:hover{
+#myrecipies:hover {
   background-color: #fe510d;
   color: black;
   transition: 0.7s;
-} 
+}
 
-#share{
+#share {
   margin: 60vh 0vw 0vh 65vw;
 }
-#share:hover{
+#share:hover {
   background-color: #fbd100;
   color: black;
   transition: 0.7s;
@@ -196,7 +200,7 @@ nav {
   width: 30px;
 }
 
-.erro404{
+.erro404 {
   position: absolute;
   color: aliceblue;
   padding: 0vh 50vw 0vh 0vw;
@@ -204,18 +208,27 @@ nav {
 
 .search {
   position: absolute;
-  align-items: center;  
+  align-items: center;
 }
-
 
 .savedRecipes {
   position: absolute;
 }
 
-.blogImg{
+.blogImg {
   position: absolute;
   padding-inline-start: 5%;
   border-radius: 5%;
-  
-  
+}
+
+.recipePage {
+  position: absolute;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.ingInstr {
+  margin-right: 1vw;
+  text-align: start;
 }
