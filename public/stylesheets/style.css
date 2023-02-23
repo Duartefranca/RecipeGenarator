@@ -58,7 +58,14 @@ nav {
   width: 100vw;
 }
 
-.backgound-login {
+.long-backgound {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.backgound-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -191,7 +198,13 @@ nav {
 
 .search {
   position: absolute;
-  align-items: center;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+  width: 45%;
+  height: 40%;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.836);
 }
 
 .savedRecipes {
@@ -231,4 +244,23 @@ nav {
 .ingInstr {
   margin-right: 1vw;
   text-align: start;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  text-align: center;
+  padding: auto;
+}
+
+.my-recipies-text {
+  color: white;
+}
+
+#search{
+  margin-bottom: 60px;
 }

@@ -1,7 +1,10 @@
-<img class="backgound-login" src="/images/vegetables.jpg" />
+<img class="backgound-img" src="/images/vegetables.jpg" />
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a href="/" class="navbar-brand"><img class="logoImg" src="/images/logo.png"></a>
+    <a href="/" class="navbar-brand"><img
+        class="logoImg"
+        src="/images/logo.png"
+      /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,13 +18,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="/blog">Blog</a>               
+        <a class="nav-link" href="/blog">Blog</a>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >User</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
-            <li><a class="dropdown-item" href="/auth/edit-profile/:id">Edit Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/auth/edit-profile/{{_id}}">Edit
+                Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="/auth/delete">Delete Account</a></li>
           </ul>
         </li>
@@ -29,8 +39,6 @@
     </div>
   </div>
 </nav>
-
-
 
 <a class="recipies" id="genarator" href="/genarator">Surprise Me</a>
 <a class="recipies" id="ingredient" href="/ingredient">Search by Ingredients</a>

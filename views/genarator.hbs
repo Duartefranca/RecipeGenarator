@@ -1,4 +1,4 @@
-<img class="backgound-login" src="/images/bread.png" />
+<img class="long-backgound" src="/images/bread.png" />
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -25,30 +25,23 @@
 </nav>
 
 
-
-<div>
-<a class="btn btn-primary" href="/genarator">New Recipies</a>
-</div>
-
+<br>
+<h2 class="recipies">Surprise Me</h2>
+<br>
 <div class="flex-container">
-
   {{! Info para mostrar }}
   {{#each recipes}}
-
     <div class="card genCard">
       <img class="genarator-img" src="{{image}}" alt="{{title}}" />
-
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <p class="ingredients">{{ingredients}}</p>
         <p class="instructions">{{instructions}}</p>
-
         <form action="/add/{{id}}" method="post">
           <button type="submit" class="btn btn-primary">Save Recipe</button>
         </form>
       </div>
     </div>
-
   {{/each}}
 </div>
 
