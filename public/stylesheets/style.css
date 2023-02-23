@@ -5,6 +5,7 @@ body {
   background-size: 100%;
   background-color: black;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -61,9 +62,8 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
-  width: 100%;
-  
+  width: 100vw;
+  height: 100vh;
 }
 
 .login-body {
@@ -166,31 +166,13 @@ nav {
   transition: 0.7s;
 }
 
-.new-recipies-1 {
-  position: absolute;
-  text-decoration: none;
-  border-style: hidden;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin-left: 0.5vw;
-  margin-top: 5vh;
-}
-
-.new-recipies-2 {
+.new-recipies {
   position: absolute;
   text-decoration: none;
   border-style: hidden;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.836);
   margin: 5vh 20vw 0vh 45vw;
-}
-
-.newrecipies {
-  position: absolute;
-  align-items: center;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.836);
-  margin: 10vh 20vw 10vh 45vw;
 }
 
 .logoImg {
