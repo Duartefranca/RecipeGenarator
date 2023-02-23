@@ -27,6 +27,7 @@
 <h2>My Recipies </h2>
 {{#each recipe}}
 {{title}}
+{{instructions}}
 <a href="/edit/{{_id}}"> EDIT </a>
 <form action='/delete/{{_id}}' method='post'><button type="submit">Delete Recipies</button></form>
 {{/each}}
