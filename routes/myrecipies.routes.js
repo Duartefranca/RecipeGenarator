@@ -17,9 +17,9 @@ router.post('/add/:api_id', async(req, res, next) => {
     const {api_id} = req.params
    const response = await axios.get(`https://api.spoonacular.com/recipes/${api_id}/information?apiKey=${process.env.APP_KEY}`)
 
-   const {title, instructions, servings, cuisines, dishTypes, image} = response.data
+   const {title, instructions, ingedients, servings, cuisines, dishTypes, image} = response.data
 
-   await Recipe.create({title, instructions, servings, cuisines, dishTypes, image})
+   await Recipe.create({title, instructions, ingedients, servings, cuisines, dishTypes, image})
 
     res.redirect('/myrecipies')
   } catch (error) {
@@ -41,7 +41,7 @@ router.post('/create', fileUploader.single('imgURL'), async (req, res, next) => 
   try {
     let imgURL;
 
-    const { title, servings, instructions, dishTypes, cuisines } = req.body;
+    const { title, servings, instructions, ingedients, dishTypes, cuisines } = req.body;
 
     if (req.file) {
       imgURL = req.file.path;
@@ -49,7 +49,7 @@ router.post('/create', fileUploader.single('imgURL'), async (req, res, next) => 
       imgURL = 'https://img.freepik.com/fotos-premium/despertador-em-uma-placa-branca-com-uma-faca-e-um-garfo-no-fundo-azul_169016-21306.jpg?w=826';
     }
 
-    await Recipe.create({ title, servings, instructions, dishTypes, cuisines, image: imgURL });
+    await Recipe.create({ title, servings, instructions, ingedients, dishTypes, cuisines, image: imgURL });
 
     res.redirect('/');
   } catch (error) {
@@ -70,7 +70,7 @@ router.get('/edit/:id', async (req, res, next) => {
 router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) => {
   try {
     const { id } = req.params;
-    const { title, servings, instructions, dishTypes, cuisines } = req.body;
+    const { title, servings, instructions, ingedients, dishTypes, cuisines } = req.body;
 
     let imageUrl;
 
@@ -81,7 +81,7 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
       imageUrl = recipe.image;
     }
 
-    await Recipe.findByIdAndUpdate(id,{ title, servings, instructions, dishTypes, cuisines, image: imageUrl });
+    await Recipe.findByIdAndUpdate(id,{ title, servings, instructions, ingedients, dishTypes, cuisines, image: imageUrl });
 
     res.redirect('/myrecipies');
   } catch (error) {

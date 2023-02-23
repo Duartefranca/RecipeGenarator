@@ -16,6 +16,13 @@ h1 {
   color: 15px;
 }
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
 .card-img-top {
   max-width: 40vw;
   border-radius: 30px;
@@ -31,8 +38,7 @@ h1 {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.836);
   box-sizing: border-box;
-  width: 40%;
-  
+  width: 40%;  
 }
 
 .btn-primary {
@@ -50,23 +56,12 @@ h1 {
   left: 0;
   width: 100vw;
 }
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.pensil {
-  width: 20vw;
-}
 
 .backgound-login {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  
+  width: 100vw;  
 }
 
 .login-body {
@@ -76,6 +71,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
 }
+
 .login-form {
   position: relative;
   border-style: hidden;
@@ -87,6 +83,7 @@ nav {
 }
 
 .flex-container {
+  position: absolute;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -95,14 +92,14 @@ nav {
 }
 
 .genarator-img {
-  max-width: 20vw;
+  width: 25vw;
   border-radius: 30px;
 }
 
 .genCard {
   margin: 10px;
   margin-top: 80px;
-  width: 400px;  
+  width: 25vw;  
 }
 
 .login-input{
@@ -205,25 +202,12 @@ nav {
   padding: 0vh 50vw 0vh 0vw;
 }
 
-.img404{
-  
-}
-
-.myrecipes {
-position: absolute;
-}
-
 .search {
   position: absolute;
-  align-items: center;
-  
+  align-items: center;  
 }
 
-.favoriteRecipes {
-  background-color: rgba(255, 255, 255, 0.836);
 
-}
-
-.row {
+.savedRecipes {
   position: absolute;
 }
