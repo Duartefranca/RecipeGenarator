@@ -88,7 +88,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.836);
   width: 200px;
   padding: 1vw;
-  margin: 30px 350px 40px 0px;
+  margin: 0vh 40vw 0vh 0vw;
 }
 
 .flex-container {
@@ -272,4 +272,71 @@ nav {
   transform: translate(-50%, -50%);  
   width: 35vw;
   height: 80%;
+}
+
+.deleteRecipesButton {
+  width: 7vw;
+  font-size: 1em;
+  padding: 1vh 1vw 1vh 1vw;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 40px;
+  background-color: rgba(99, 98, 98, 0.733);  
+  font-weight: bold;  
+  color: white;
+}
+
+.editRecipesButton {
+  width: 7vw;
+  font-size: 1em;
+  padding: 1vh 1vw 1vh 1vw;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 40px;
+  background-color: rgba(99, 98, 98, 0.733);  
+  font-weight: bold;  
+  color: white;
+}
+
+.editRecipe {
+  margin-left: 20vw;
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 40px;
+  background-color: rgba(99, 98, 98, 0.733);
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+  margin-left: 20vw;
+}
+
+.text{
+  margin-left: 6vw;
+}
+
+.textTitle{
+  margin-left: 13vw;
+}
+
+.genaratorRefresh {
+  position: absolute;
+  text-decoration: none;
+  border-style: hidden;
+  border-radius: 40px;
+  background-color: rgba(99, 98, 98, 0.733);
+  padding: 1vh 1vw 1vh 1vw;
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+  margin-top: 1vh;
+}
+
+.searchButton{
+  border-style: hidden;
+  background-color: rgba(99, 98, 98, 0);
+}
+
+.searchIcon {
+  height: 30px;
 }

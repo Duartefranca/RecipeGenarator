@@ -42,8 +42,11 @@
 <p class="instructions">{{instructions}}</p>
 </div>
 
-<a href="/edit/{{_id}}"> EDIT </a>
-<form action='/delete/{{_id}}' method='post'><button type="submit">Delete Recipes</button></form>
+<a class="editRecipesButton" href="/edit/{{_id}}"> EDIT </a>
+<br>
+<form action='/delete/{{_id}}' method='post'>
+<button class="deleteRecipesButton" type="submit">Delete Recipes</button>
+</form>
 </div>
 
 {{/each}}
