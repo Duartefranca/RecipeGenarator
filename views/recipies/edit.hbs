@@ -2,18 +2,21 @@
 
 
 
-<div class='row'>
+<div class="editRecipe">
 
-<h1> edit</h1>
+<div class="text">
+<br>
+<h1 class="textTitle"> Edit Recipe</h1>
 
   <div class='col-md-6'>
     <form action='/edit/{{_id}}' method='post' enctype='multipart/form-data'>
       <div class='form-group'>
-        <label for='title' class='form-label'>Title</label>
+        <label for='title' class='form-label'>Title:</label>
         <input type='text' name='title'value={{title}} class='form-control' id='title' />
       </div>
+      <br>
       <div class='form-group'>
-        <label for='instructions' class='form-label'>summary</label>
+        <label for='instructions' class='form-label'>Summary:</label>
         <textarea
           class='form-control'
           name='instructions'
@@ -22,12 +25,15 @@
           rows='10'
         > {{summary}}</textarea>
       </div>
+      <br>
       <div class='form-group'>
         <label>Image:
           <input type='file' name='poster' class='form-control-file' />
         </label>
       </div>
+      <br>
       <button type='submit' class='btn btn-primary'>Submit</button>
     </form>
   </div>
+</div>
 </div>
