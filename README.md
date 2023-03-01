@@ -27,7 +27,7 @@ Mix them and make a lovely and tasty dish
 ## Server Routes (Back-end):
 
 | **Method** | **Route**               | **Description**                                                              | Request - Body                                                                                     |
-| ---------- | ----------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | --- | --- |
+| ---------- | ----------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- 
 | `GET`      | `/`                     | Main page route. Renders home `index`                                        | Shows a random recipe in the home page                                                             
 | `GET`      | `/blog`                 | Blog page route. Renders blog `blog`, random news about food nutrition (SEO) |
 | `GET`      | `/login`                | Renders `login` form view.                                                   |                                                                                                 
