@@ -28,20 +28,20 @@ Mix them and make a lovely and tasty dish
 
 | **Method** | **Route**               | **Description**                                                              | Request - Body                                                                                     |
 | ---------- | ----------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | --- | --- |
-| `GET`      | `/`                     | Main page route. Renders home `index`                                        | Shows a random recipe in the home page                                                             |     |
+| `GET`      | `/`                     | Main page route. Renders home `index`                                        | Shows a random recipe in the home page                                                             
 | `GET`      | `/blog`                 | Blog page route. Renders blog `blog`, random news about food nutrition (SEO) |
-| `GET`      | `/login`                | Renders `login` form view.                                                   |                                                                                                    |
-| `POST`     | `/login`                | Sends Login form data to the server.                                         | { email/usename, password }                                                                        |
-| `GET`      | `/signup`               | Renders `signup` form view.                                                  |                                                                                                    |
-| `POST`     | `/signup`               | Sends Sign Up info to the server and creates user in the DB.                 | { email/username, password }                                                                       |
-| `GET`      | `/private/edit-profile` | Private route. Renders `edit-profile` form view.                             |                                                                                                    |
-| `PUT`      | `/private/edit-profile` | Private route. Sends edit-profile info to server and updates user in DB.     | { email/username, password, [firstName], [lastName], [imageUrl] }                                  |
-| `GET`      | `/private/recipes`      | Private route. Render the recipe view.                                       | Shows our recipes and the favorites recipes from the data base                                     |    
-| `POST`     | `/private/recipes`      | Private route. Adds a new recipe for the current user.                       | [RecipeName], [Ingredients],[MainIngredient], [imageUrl], [Preparation], [Time], [DishType]        |
-| `DELETE`   | `/private/recipes/:Id`  | Private route. Deletes the existing recipe from the current user.            |                                                                                                    |
+| `GET`      | `/login`                | Renders `login` form view.                                                   |                                                                                                 
+| `POST`     | `/login`                | Sends Login form data to the server.                                         | { email/usename, password }                                                                      
+| `GET`      | `/signup`               | Renders `signup` form view.                                                  |                                                                                                 
+| `POST`     | `/signup`               | Sends Sign Up info to the server and creates user in the DB.                 | { email/username, password }                                                                    
+| `GET`      | `/private/edit-profile` | Private route. Renders `edit-profile` form view.                             |                                                                                                 
+| `PUT`      | `/private/edit-profile` | Private route. Sends edit-profile info to server and updates user in DB.     | { email/username, password, [firstName], [lastName], [imageUrl] }                               
+| `GET`      | `/private/recipes`      | Private route. Render the recipe view.                                       | Shows our recipes and the favorites recipes from the data base                                    
+| `POST`     | `/private/recipes`      | Private route. Adds a new recipe for the current user.                       | [RecipeName], [Ingredients],[MainIngredient], [imageUrl], [Preparation], [Time], [DishType]     
+| `DELETE`   | `/private/recipes/:Id`  | Private route. Deletes the existing recipe from the current user.            |                                                                                                   
 | `GET`      | `/recipes/generator`    | Renders `recipes-generator` view.                                            | Allows to search by main ingredient or all ingredients and ([Suprise Me], renders a random recipe) |     
 | `GET`      | `/recipes/details/:id`  | Renders `recipes-details` view for the recipe.                               |
-| `POST`     | `/recipes/share/:id`    | Renders `recipes-details` allows you to share your recipes.                  |                                                                                                    |
+| `POST`     | `/recipes/share/:id`    | Renders `recipes-details` allows you to share your recipes.                  |                                                                                                
 
 ## Models
 
