@@ -1,6 +1,8 @@
 # All About Food
 
-DEPLOYED LINK: 
+<br>
+
+## DEPLOYED LINK: 
 https://recipe-generator.cyclic.app/
 
 <br>
